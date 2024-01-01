@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ItemsController } from './items.controller';
 import { ItemsService } from './items.service';
-import { ItemRepository } from './item.repositoru';
+import { ItemRepository } from './item.repository';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AuthModule } from 'src/auth/auth.module';
 

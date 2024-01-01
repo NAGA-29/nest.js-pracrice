@@ -1,6 +1,7 @@
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 import { UserStatus } from '../auth/user-status.enum';
 import { Item } from './item.entity';
+import { Exclude } from 'class-transformer';
 
 @Entity()
 export class User {
@@ -11,6 +12,7 @@ export class User {
   username: string;
 
   @Column()
+  @Exclude({ toPlainOnly: true }) // レスポンスに含めない
   password: string;
 
   @Column()
